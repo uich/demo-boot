@@ -1,0 +1,17 @@
+---
+spring:
+  profiles: peer1
+server:
+  port: 8111
+---
+spring:
+  profiles: peer2
+server:
+  port: 8112
+---
+spring:
+  application:
+    name: demoservice
+  cloud:
+    config:
+      uri: http://localhost:8888
